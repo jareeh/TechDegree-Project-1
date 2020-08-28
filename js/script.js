@@ -62,6 +62,21 @@ function getRandomQuote(){
 /***
  * `printQuote` function
 ***/
+function printQuote(){
+  let randomQuote = getRandomQuote()
+  let HTML = `
+    <p class="quote">${randomQuote.quote}</p>
+    <p class="quote">${randomQuote.source}
+    `;
+    if(randomQuote.citation){
+      HTML+= `  <span class="${randomQuote.citation}"></span>`;
+    }
+    if(randomQuote.year){
+      HTML+= `  <span class="${randomQuote.year}"></span>`;
+    }
+    HTML += '</p>';
+    return HTML;
+};
 
 
 

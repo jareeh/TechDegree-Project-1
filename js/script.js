@@ -3,20 +3,60 @@ Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
 ******************************************/
 
-// For assistance: 
-  // Check the "Project Resources" section of the project instructions
-  // Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
 
 /*** 
  * `quotes` array 
 ***/
+const quotes = [
+  {
+    quote: '"Tell me and I forget. Teach me and I remember. Involve me and I learn."',
+    source: 'Benjamin Franklin',
+    citation: '',
+    year: '',
+  },
+  {
+    quote: '"In the end, it\'s not the years in your life that count. It\'s the life in your years." ',
+    source: 'Abraham Lincoln',
+    citation: '',
+    year: '',
+  },
+  {
+    quote: '"Never let the fear of striking out keep you from playing the game."',
+    source: 'Babe Ruth',
+    citation: '',
+    year: '',
+  },
+  {
+    quote: '"Don\'t judge each day by the harvest you reap but by the seeds that you plant."',
+    source: 'Robert Louis Stevenson',
+    citation: '',
+    year: '',
+  },
+  {
+    quote: '"The only impossible journey is the one you never begin."',
+    source: 'Tony Robbins',
+    citation: '',
+    year: '',
+  },
+  {
+    quote: '"Life is what happens when you\'re busy making other plans."',
+    source: 'John Lennon',
+    citation: '',
+    year: '',
+  },
+];
 
-
+// for (let i = 0; i < quotes.length; i++){
+//   console.log(quotes[i].quote)
+// }
 
 /***
  * `getRandomQuote` function
 ***/
-
+function getRandomQuote(){
+  let random = Math.floor((Math.random() * quotes.length));
+  return quotes[random];
+};
 
 
 /***
@@ -30,4 +70,4 @@ project 1 - A Random Quote Generator
  * DO NOT CHANGE THE CODE BELOW!!
 ***/
 
-document.getElementById('load-quote').addEventListener("click", printQuote, false);
+//document.getElementById('load-quote').addEventListener("click", printQuote, false);

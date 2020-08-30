@@ -6,7 +6,7 @@ project 1 - A Random Quote Generator
 
 //quotes array:
 //array storing several quote objects containing quotes,
-//sources, citations, and years
+//sources, citations, years and tags
 const quotes = [
   {
     quote: 'Tell me and I forget. Teach me and I remember. Involve me and I learn.',
@@ -52,7 +52,6 @@ const quotes = [
   }
 ];
 
-
 /**
  * `getRandomQuote` function
  * 
@@ -66,10 +65,13 @@ function getRandomQuote(){
   return quotes[random];
 };
 
+//returns a value between 0-256 for the RGB CSS value
 function randomColorValue(){
   return Math.floor(Math.random() * 256);
 };
 
+//assigns 3 random values to each of r, g, and b
+//assigns the rbg color to the background color style property
 function changeColors(){
   let red = randomColorValue();
   let green = randomColorValue();
@@ -77,9 +79,6 @@ function changeColors(){
   let randomRGB = `rgb(${red}, ${green}, ${blue})`;
   document.body.style.backgroundColor= randomRGB;
 };
-
-// const body = document.getElementById("body");
-
 
 /**
  * `printQuote` function

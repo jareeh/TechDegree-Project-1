@@ -54,7 +54,7 @@ const quotes = [
 
 
 /**
- *  `getRandomQuote` function
+ * `getRandomQuote` function
  * 
  * Returns a random number between 0 to 1 less than quotes array length.
  *
@@ -91,7 +91,7 @@ function changeColors(){
  */
 function printQuote(){
   changeColors();
-  let randomQuote = getRandomQuote();
+  const randomQuote = getRandomQuote();
   let HTML = `
     <p class="quote">${randomQuote.quote}</p>
     <p class="source">${randomQuote.source}
@@ -109,8 +109,11 @@ function printQuote(){
     document.getElementById('quote-box').innerHTML = HTML; 
 };
 
+//setInterval used to refresh quote every 12s (12000ms), calling printQuote
+setInterval(printQuote, 12000);
 
 /**
  * click event listener for the print quote button
 */
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
+
